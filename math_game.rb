@@ -1,11 +1,37 @@
 # math_game.rb
 require './methods'
 
+class Player
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def earn_point
+  end
+
+  def lose_life
+  end
+
+end
+
 # Intitalize the lives
 pl_1_lives = 3
 pl_2_lives = 3
 pl_1_pts = 0
 pl_2_pts = 0
+
+puts "Player 1, please enter your name: "
+name = gets.chomp
+player_1 = Player.new(name)
+puts "Welcome #{player_1.name}, you are Player 1."
+
+puts "Player 2, please enter your name: "
+name = gets.chomp
+player_2 = Player.new(name)
+puts "Welcome #{player_2.name}, you are Player 2."
+
 
 # Loop until one player runs out of lives
 until pl_1_lives == 0 || pl_2_lives == 0 do
@@ -37,5 +63,3 @@ until pl_1_lives == 0 || pl_2_lives == 0 do
 
 end
 puts "Game over"
-
-one small thing
