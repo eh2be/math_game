@@ -37,3 +37,5 @@ until pl_1_lives == 0 || pl_2_lives == 0 do
 
 end
 puts "Game over"
+
+one small thing
