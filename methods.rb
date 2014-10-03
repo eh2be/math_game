@@ -5,8 +5,8 @@
 
 def play_turn(pl_lives, pl_pts)  
   q = @math_q.sample
-  num_1 = rand(20).to_f
-  num_2 = rand(20).to_f
+  num_1 = rand(1..20).to_f
+  num_2 = rand(1..20).to_f
   expr = "#{num_1} #{q} #{num_2}"
 
   puts "What is #{expr} (to one decimal place)?"
@@ -18,8 +18,8 @@ def play_turn(pl_lives, pl_pts)
     return true
   else
     pl_lives -= 1
-    puts "Wrong! The answer is #{ans}. "
-    return false
+    puts "Wrong! The answer is #{ans}."
+#    return false
   end
 end
 
